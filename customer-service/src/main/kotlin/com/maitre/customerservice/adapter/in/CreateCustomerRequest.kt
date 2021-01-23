@@ -15,7 +15,7 @@ data class CreateCustomerRequest(
 
 
         fun toCustomer(): Customer {
-                return Customer(name,email,phone)
+                return Customer(name=name,email=email,phone=phone)
         }
 
 

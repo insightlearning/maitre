@@ -1,6 +1,7 @@
 package com.maitre.customerservice.adapter.out.persistence
 
-interface CustomerRepository {
+import org.springframework.data.mongodb.repository.MongoRepository
+import org.springframework.stereotype.Repository
 
-    fun save(customerEntity: CustomerEntity)
-}
+@Repository
+interface CustomerRepository: MongoRepository<CustomerEntity,String>

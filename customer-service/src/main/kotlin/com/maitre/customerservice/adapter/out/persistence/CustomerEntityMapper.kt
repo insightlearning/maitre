@@ -7,6 +7,10 @@ import org.springframework.stereotype.Component
 class CustomerEntityMapper {
 
     fun toEntity(domainObject: Customer): CustomerEntity{
-        return CustomerEntity(domainObject.name,domainObject.email, domainObject.phone)
+        return CustomerEntity(domainObject.id,domainObject.name,domainObject.email, domainObject.phone)
+    }
+
+    fun toDomain(entity: CustomerEntity): Customer {
+        return Customer(entity.id,entity.name,entity.email, entity.phone)
     }
 }
